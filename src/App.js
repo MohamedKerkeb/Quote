@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedoAlt } from '@fortawesome/free-solid-svg-icons';
 
 import './App.css';
+import QuoteRandom from './component/QuoteRandom';
+import QuoteAuthor from './component/QuoteAuthor';
 
 const App = () => {
 	const [quote, setQuote] = useState([]);
@@ -54,28 +56,9 @@ const App = () => {
 				</header>
 				<section className='wrapperQuote'>
 					{vue ? (
-						quote.map((q) => (
-							<div key={q.id}>
-								<p className='quote'>{q.text}</p>
-								<div className='wrapperAuthor'>
-									<h4 className='author' onClick={() => fetchAuthor(q.author)}>
-										{q.author}
-									</h4>
-									<span className='genre'>{q.genre}</span>
-								</div>
-							</div>
-						))
+						<QuoteRandom quote={quote} fetchAuthor={fetchAuthor} />
 					) : (
-						<div>
-							<h2>{message}</h2>
-							{quotesAuthor.map((t, i) => (
-								<div>
-									<p className='quote' key={i}>
-										{t}
-									</p>
-								</div>
-							))}
-						</div>
+						<QuoteAuthor message={message} quotesAuthor={quotesAuthor} />
 					)}
 				</section>
 				<footer>

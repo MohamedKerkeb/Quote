@@ -11,7 +11,7 @@ body {
 
 .main {
 	text-align: center;
-	width: 50%;
+	min-width: 50%;
 	min-height: 100vh;
 	max-height: 100%;
 	margin: auto;
@@ -26,7 +26,7 @@ body {
 header {
 	/* border: 1px dashed red; */
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
 }
 
 button {
@@ -48,7 +48,7 @@ button:hover {
 .wrapperQuote {
 	/* border: #fff 1px solid; */
 	padding: 10px 0;
-	width: 450px;
+	max-width: 450px;
 	margin: 10px auto;
 }
 
@@ -62,7 +62,7 @@ button:hover {
 
 .wrapperAuthor {
 	/* border: #fff 1px dashed; */
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -72,7 +72,7 @@ button:hover {
 
 .author {
 	/* border: #61dafb 1px dashed; */
-	width: 350px;
+	width: 100%;
 	margin: auto;
 	height: 50px;
 	cursor: pointer;
